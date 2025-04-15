@@ -117,7 +117,7 @@ read -r -p "(Default: en-US) Type the language: " response
 		wget "https://download.mozilla.org/?product=firefox-nightly-latest&os=linux64&lang=$response" --trust-server-names;;
 	*) rm -R -f /opt/firefox-nightly && echo " $response is not a valid language code, installation aborted!"; exit;;
 esac
-tar fx firefox-*.tar.bz2
+tar fx firefox-*.tar.xz
 cd ..
 mv ./tmp/firefox/* ./
 rm -R ./tmp
